@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>B2 Collocation Quiz</title>
+<style>
+:root{--p:#c0104a;--pd:#8c0b36;--a:#ffd166;--bg:#f8edf1;--ok:#1f9d6b;--okb:#dcf3e9;--no:#d4483b;--nob:#fbe3e0}
+[hidden]{display:none!important}*{box-sizing:border-box}body{margin:0;font:17px/1.5 system-ui,sans-serif;background:var(--bg);color:#2b1d22;display:flex;flex-direction:column;align-items:center;padding:24px 16px;min-height:100vh}
+main{max-width:560px;width:100%;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 24px #c0104a22}
+header{background:linear-gradient(135deg,var(--p),var(--pd));color:#fff;padding:20px 24px 16px}
+h1{font-size:22px;margin:0}h1 span{color:var(--a)}
+#top{display:flex;justify-content:space-between;font-size:14px;opacity:.85;margin-top:6px}
+#bar{height:6px;background:#ffffff33;border-radius:3px;margin-top:10px}#bar i{display:block;height:100%;width:0;background:var(--a);border-radius:3px;transition:width .3s}
+section{padding:22px 24px}
+#q{font-size:20px;margin:0 0 18px;min-height:60px}#q b{color:var(--ok)}
+button{display:block;width:100%;padding:12px 14px;margin:8px 0;font:inherit;border:2px solid #ecd5dd;border-radius:10px;background:#fff;color:inherit;cursor:pointer;text-align:left;transition:.15s}
+button:hover:enabled{border-color:var(--p);background:#fdf3f6}.ok{background:var(--okb);border-color:var(--ok)}.no{background:var(--nob);border-color:var(--no)}.sel{border-color:var(--p);background:#fdf3f6;font-weight:600}.dark:disabled{opacity:.4;cursor:default}#sb{margin-top:16px}
+.dark{background:var(--p);color:#fff;border-color:var(--p);text-align:center;font-weight:600}.dark:hover:enabled{background:var(--pd);border-color:var(--pd)}
+#ov{position:fixed;inset:0;background:#4a061d88;display:flex;align-items:center;justify-content:center;padding:16px}
+#pop{background:#fff;border-radius:16px;padding:22px;max-width:480px;width:100%;animation:up .25s ease;max-height:90vh;overflow:auto;border-top:6px solid var(--a)}
+@keyframes up{from{transform:translateY(20px);opacity:0}}
+#pop h2{margin:0 0 8px;font-size:20px}#pop h2.r{color:var(--ok)}#pop h2.w{color:var(--no)}
+#pop .c{font-size:19px;font-weight:600;background:var(--bg);color:var(--pd);padding:6px 12px;border-radius:8px;display:inline-block;margin:4px 0 10px}
+#pop ul{padding-left:20px;margin:6px 0 14px}#pop li{margin:4px 0}#pop li b{color:var(--p)}
+#end{text-align:center}#end p{font-size:18px}#end .big{font-size:40px;font-weight:700;color:var(--p);margin:0}
+footer{border-top:1px solid #f0dfe5;padding:16px;text-align:center;font-size:14px}
+footer img{height:44px;display:block;margin:0 auto 4px}
+footer a{color:var(--p);font-weight:600;text-decoration:none}footer a:hover{text-decoration:underline}
+</style></head><body><main>
+<header><h1>B2 <span>Collocation</span> Quiz</h1><div id="top"><span id="n"></span><span id="s"></span></div><div id="bar"><i></i></div></header>
+<section><div id="box"><p id="q"></p><div id="o"></div><button id="sb" class="dark" disabled>Submit</button></div><div id="end" hidden></div></section>
+<footer><a href="https://www.armanienglish.com" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWoAAABYAgMAAAChc1ViAAAADFBMVEX////qr8LVYIXAEEjdV4PRAAAE7ElEQVR42tWZPW7jRhSA30iwtYgKb5EYCwsILxBAJ1iQR9gAsQtvsVvHhY9AHkGNb7Au4iK7RcoNqCOwcc9CTVKpYADJEDnBvDfD+eGPHOQ5QFiI1PDx4/DN+5sZgP/7cXL9wHD88lMP+jyXPMd9B33KhZbyU8i+ZUPLJvHRc8l47Hx2ysmWmadtVrSsXPaSl+1qXEjmo7DsGTd792IqkbKx7JybbS1lwo6WJb/j7NNQ4XzqzuahwvnUbdWbcVt3DRAonM+6DzYwabc/42Qv7SXvUNa2ow17fHUUnHCayWe0jtZQ1oxmshG5sg7hGcrU3v/z8rr9iObuhi6eLm/w75U0/6+cL703fzI1bpXVwtY3wX0CcI5Xjx9kBSKXj++lXKkLuQFYtEKUpvZXTnODw+gY4c43wVWb8JOpcqxYnZVMhJlEBEIl5NicaxOZ42/sGmHUdtsGrmTSoHGCwBQyJVdIiWG+tYC0am24pkZr0bVn3qWNAAmo18YSoKG2wvSiskIFLIu2NwdiJ21X8cE4SHIpivyGdxL4Sm2J6a0jVEDUNht2ZlWcuK5TWDfN4AveoXcAvG1ziBaK8Du/t6lF62Rtk0Hmuk5hM0UGH5GtziIBeAPwmjRRWqESXgF8qxXUUFthzU6xnTx0/usn8/p3+FZ1/xbH+EKZBJrt6ed7cgr1mm+U3eSkgiW2TZ2uWreslDWR167h9aS5w3efGs2VCEGhFQptsbnSWi3xFaV1+sJNxDXZgaBgEOnviozUDtn1ohXaYrNxl+aGvHHimN2kE4KJHWt2ilLkF6mXX7bY3DiWZt5q2NNO1ZIjO9dsgkR4J/WEKrKpIfa2m9ESYgsdKCfkL7HHlom6rIwvLN1iTTjF7KxTEeWGqc5T2UIcdqbZeZcNo+xUMWeaPSMp6bPXxBZtcD3OfnrI6THjXnTWH2oMwghV9HEhO7eXM68kP8kD9lnIRqGiw3667mHP/Yp8odlnmh2h1MSyrVBFNpbpCLQYY1M41WMZDbBJaBWyd9pRhtiVLQ+H2Ts7sXPZpQ5MQ+ziOezSCoXsdGQss+ews2F2PMIGgMsEdDwZYicA3yVddqWTisN27btR8XQPOg4OsI0QyM5YGnaf79QYkVbj7FoHXRGwDxd97KlfPFc6NwyzW2/37FtmEHXi4MQPBYfxfh9Qn4eOTo6yBWkmH2e3QiF72ck74h+yhTShvI/t58suOz3KprKvn+3medfW6Tc+qhOa1/Sxnfpk7bBpmLb42FE7Ue197KCucpL30lQNY+wlfu4AO7PsxKljserawzi7Uc5WU9Xusylt2jpWevU3APz8jh4bjScoNO9ng18jn/lx8I167FgcfNXHjo1ebW0/9+P3D+NsIzTrZYfznamfd76qx4bZJPT7ALvyQqzj9PgVk8MIOzZC9QC7DBcipGs1ET5W9LGxUEOFL4bYhefy7qRkoyZ0jdL3Rq/9bvTcDMekwNnerhWqqWwoTW2PVjTzLcOWRXcnz1hOvju56Wt+/LGdmDjrEBHnGkfkDh7nuo8zLd5xLw/W1gRL/nU24S2fgDen+Lfrg8GyD+dg/nXrD+ULLFE7K/eCn128xAZMoG7mHZhg3Z59Abx8mV2pQCXsSvE2pgTvjsPK2/NacKL3/n4aa8dX4f4lH3rT2Ry94EL/0bep+8By3P83u9t/A3DXnjpsiJrFAAAAAElFTkSuQmCC" alt="Armani English">www.armanienglish.com</a></footer>
+</main>
+<div id="ov" hidden><div id="pop"></div></div>
+<script>
+// sentence | correct | wrong | wrong | wrong | explanation | examples (separated by ;)
+const D=`The new law will ___ effect from next month.|take|make|have|get|We say a law or rule <i>takes effect</i> when it officially starts to work. Don't confuse it with <i>have an effect on</i>, which means "influence".|The new speed limit <b>takes effect</b> on 1 May.;The changes will <b>take effect</b> immediately.;The medicine <b>took effect</b> after twenty minutes.
+The company ___ a loss for the third year in a row.|made|did|had|took|Businesses <i>make a profit</i> or <i>make a loss</i>. <i>Make</i> is used for results that are produced, especially with money.|The shop <b>made a loss</b> during the pandemic.;We expect to <b>make a profit</b> next year.;No company can <b>make a loss</b> forever.
+Could you ___ me a favour?|do|make|give|take|The fixed phrase is <i>do someone a favour</i>. <i>Do</i> is often used for helping, tasks and services.|Can you <b>do me a favour</b> and close the window?;He <b>did me a big favour</b> by lending me his car.;I'm happy to <b>do you a favour</b> any time.
+Let's ___ a break for ten minutes.|take|make|do|get|We <i>take a break</i> when we stop working or studying for a short rest. <i>Take</i> also goes with <i>a rest, a holiday, a nap</i>.|I'm tired – let's <b>take a short break</b>.;Students <b>take a break</b> between lessons.;You should <b>take a break</b> from your phone.
+It's important to ___ attention in class.|pay|give|make|take|We <i>pay attention</i> to something when we listen or watch carefully. Think of attention as something valuable you "pay".|Please <b>pay attention</b> – this will be in the exam.;He never <b>pays attention</b> to what I say.;<b>Pay close attention</b> to the instructions.
+I ___ a cold last week and stayed in bed.|caught|took|made|held|We <i>catch a cold</i> (or <i>catch the flu</i>). <i>Catch</i> is used because the illness "comes to you" from someone or somewhere.|Wear a coat or you'll <b>catch a cold</b>.;Half the class <b>caught the flu</b> in January.;I always <b>catch a cold</b> when the weather changes.
+He ___ his promise and helped us move house.|kept|held|stayed|saved|We <i>keep a promise</i> when we do what we said we would do. The opposite is <i>break a promise</i>.|She always <b>keeps her promises</b>.;I <b>kept my promise</b> and called her every day.;Never <b>break a promise</b> to a child.
+The meeting will ___ place on Monday at 10.|take|have|make|get|<i>Take place</i> means "happen", usually for planned events. It is more formal than <i>happen</i>.|The concert will <b>take place</b> in the park.;The wedding <b>took place</b> in June.;Where did the accident <b>take place</b>?
+After months of talks, the two sides finally ___ an agreement.|reached|arrived|got|came|We <i>reach an agreement</i> (or <i>reach a decision</i>, <i>reach a conclusion</i>). <i>Arrive</i> and <i>come</i> need <i>at</i> or <i>to</i>: <i>come to an agreement</i>.|The workers and managers <b>reached an agreement</b> on pay.;It took hours to <b>reach a decision</b>.;They <b>came to an agreement</b> late at night.
+Take a warm coat – it's ___ cold outside today.|bitterly|strongly|heavily|deeply|<i>Bitterly cold</i> means extremely cold. <i>Bitterly</i> also goes with feelings: <i>bitterly disappointed</i>.|It was a <b>bitterly cold</b> morning in January.;The wind was <b>bitterly cold</b>.;Fans were <b>bitterly disappointed</b> by the result.`.split('\n').map(l=>l.split('|'));
+const $=id=>document.getElementById(id),sh=a=>{for(let i=a.length;i-->1;){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+let Q,i,sc,wrong,sel;
+function start(){Q=sh(D.slice());i=sc=0;wrong=[];$('end').hidden=1;$('box').hidden=0;show()}
+function show(){const[t,c,w1,w2,w3]=Q[i];$('n').textContent=`Question ${i+1} / ${Q.length}`;$('s').textContent=`Score: ${sc}`;
+$('bar').firstChild.style.width=i/Q.length*100+'%';$('q').textContent=t.replace('___','_____');$('o').innerHTML='';$('sb').disabled=1;
+sh([c,w1,w2,w3]).forEach(x=>{const b=document.createElement('button');b.textContent=x;b.onclick=()=>{[...$('o').children].forEach(e=>e.className='');b.className='sel';sel=[b,x];$('sb').disabled=0};$('o').append(b)})}
+function pick(b,x){const[t,c,,,,ex,eg]=Q[i],right=x==c;
+[...$('o').children].forEach(e=>{e.disabled=1;if(e.textContent==c)e.className='ok'});
+if(right)sc++;else{b.className='no';wrong.push(t.replace('___',c))}
+$('q').innerHTML=t.replace('___','<b>'+c+'</b>');$('s').textContent=`Score: ${sc}`;
+setTimeout(()=>{$('pop').innerHTML=`<h2 class="${right?'r':'w'}">${right?'✓ Correct!':'✗ Not quite'}</h2>`+
+(right?'':`<div>You chose <s>${x}</s>. The answer is:</div>`)+`<div class="c">${c}</div><p>${ex}</p><b>Examples:</b><ul>${eg.split(';').map(e=>'<li>'+e+'</li>').join('')}</ul>`+
+`<button id="nx" class="dark">${i+1<Q.length?'Next question →':'See my results'}</button>`;$('ov').hidden=0;$('nx').onclick=next;$('nx').focus()},400)}
+$('sb').onclick=()=>{$('sb').disabled=1;pick(...sel)};
+function next(){$('ov').hidden=1;++i<Q.length?show():end()}
+function end(){$('box').hidden=1;$('bar').firstChild.style.width='100%';$('n').textContent='Finished';const p=Math.round(sc/Q.length*100),e=$('end');e.hidden=0;
+e.innerHTML=`<p class="big">${sc} / ${Q.length}</p><p>${p>=80?'Excellent!':p>=60?'Good job!':'Keep practising!'} (${p}%)</p>`+
+(wrong.length?`<p style="text-align:left;font-size:15px">Review these:<br>${wrong.map(w=>'• '+w).join('<br>')}</p>`:'')+'<button id="re" class="dark">Try again</button>';
+$('re').onclick=start}
+start()
+</script></body></html>
